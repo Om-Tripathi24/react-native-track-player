@@ -4,6 +4,7 @@ buildscript {
     repositories {
         mavenCentral()
         google()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -54,13 +55,14 @@ repositories {
 
     mavenCentral()
     google()
+    jcenter()
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'
     
-    def exoPlayerVersion = safeExtGet("exoPlayerVersion", '2.11.4')
+    def exoPlayerVersion = safeExtGet("exoPlayerVersion", '2.13.3')
 
     // ExoPlayer Core
     implementation "com.google.android.exoplayer:exoplayer-core:${exoPlayerVersion}"
